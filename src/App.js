@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 
 class App extends Component {
@@ -7,8 +7,8 @@ class App extends Component {
       <div className="App">
         <h1>dbshive.com</h1>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
