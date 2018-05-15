@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom'
 // containers
 import Top from '../Top'
 import Product from '../Product'
-import NoMatch from '../../components/NoMatch'
+import NoMatch from '../NoMatch'
 
 
 const App = () => {

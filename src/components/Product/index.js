@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 
 
 class Product extends Component {
+  componentWillMount() {
+  }
+
   render() {
     return (
       <div className="Product">
