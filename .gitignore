@@ -1,4 +1,6 @@
+# mySettings
 yarn.lock
+/src/static
 
 # dependencies
 /node_modules
