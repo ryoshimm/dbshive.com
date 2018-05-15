@@ -8,7 +8,7 @@ const Top = () => {
 
       <a href='/product'>Product</a>
       <br />
-      <a href='/product'>About</a>
+      <a href='/about'>About</a>
     </div>
   )
 }
