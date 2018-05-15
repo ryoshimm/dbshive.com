@@ -1,14 +1,16 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 
-class Top extends Component {
-  render() {
-    return (
-      <div className="Top">
-        <h1>Top</h1>
-      </div>
-    )
-  }
+const Top = () => {
+  return (
+    <div className="Top">
+      <h1>Top</h1>
+
+      <a href='/product'>Product</a>
+      <br />
+      <a href='/product'>About</a>
+    </div>
+  )
 }
 
 export default Top

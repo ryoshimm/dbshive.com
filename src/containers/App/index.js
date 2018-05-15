@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 
 // containers
@@ -7,21 +7,21 @@ import Product from '../Product'
 import NoMatch from '../../components/NoMatch'
 
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <h1>dbshive.com</h1>
+const App = () => {
+  return (
+    <div className="App">
+      <h1>dbshive.com</h1>
 
-        <Switch>
-          <Route exact path='/' component={Top} />
-          <Route path='/product' component={Product} />
+      <hr />
 
-          <Route component={NoMatch} />
-        </Switch>
-      </div>
-    )
-  }
+      <Switch>
+        <Route exact path='/' component={Top} />
+        <Route path='/product' component={Product} />
+
+        <Route component={NoMatch} />
+      </Switch>
+    </div>
+  )
 }
 
 export default App
