@@ -5,7 +5,7 @@ const ProductBox = (props) => {
   const { product } = props
 
   return (
-    <div className="Product">
+    <div className="ProductBox">
       <h3>{product.title}</h3>
       {product.description}
     </div>
