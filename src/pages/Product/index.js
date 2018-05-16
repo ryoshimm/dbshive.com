@@ -6,7 +6,7 @@ import SelectCategoryFilter from '../../components/SelectCategoryFilter'
 import SelectQualityFilter from '../../components/SelectQualityFilter'
 
 // assets
-import { productsAsset } from '../../static/assets/productsAsset'
+import { productAsset } from '../../static/assets/productAsset'
 
 
 class Product extends Component {
@@ -17,7 +17,7 @@ class Product extends Component {
   }
 
   componentWillMount() {
-    const products = productsAsset.map(product => {
+    const products = productAsset.map(product => {
       return product
     })
 

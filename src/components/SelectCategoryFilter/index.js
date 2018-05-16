@@ -4,7 +4,7 @@ import React from 'react'
 import FilterButton from '../FilterButton'
 
 // assets
-import { categorysAsset } from '../../static/assets/categorysAsset'
+import { categoryAsset } from '../../static/assets/categoryAsset'
 
 
 const SelectCategoryFilter = (props) => {
@@ -21,7 +21,7 @@ const SelectCategoryFilter = (props) => {
         onToggle={onToggle}
       />
 
-      {categorysAsset.map(c => (
+      {categoryAsset.map(c => (
         <FilterButton
           key={c}
           data={c}
