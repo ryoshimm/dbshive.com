@@ -1,6 +1,29 @@
 import React, { Component } from 'react'
 
 
+const AuthorList = (props) => {
+  const { product, authorThumbnails } = props
+
+  const renderAuthorList = product.author.map(authorId => {
+    return (
+      <img
+        alt={authorId}
+        src={authorThumbnails[authorId]}
+        width='32'
+        height='32'
+      />
+    )
+  })
+
+  return (
+    <div>
+      <div>Author: </div>
+      {renderAuthorList}
+    </div>
+  )
+}
+
+
 class ProductBox extends Component {
   state = {
     imageFile: null,
@@ -21,7 +44,7 @@ class ProductBox extends Component {
   }
 
   render() {
-    const { product } = this.props
+    const { product, authorThumbnails } = this.props
 
     return (
       <div className="ProductBox">
@@ -45,6 +68,11 @@ class ProductBox extends Component {
         })()}
 
         {product.description}
+
+        <AuthorList
+          authorThumbnails={authorThumbnails}
+          product={product}
+        />
       </div>
     )
   }
