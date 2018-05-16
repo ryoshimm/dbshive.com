@@ -53,7 +53,7 @@ class Product extends Component {
         (
           this.state.selectQuality === 0 || this.state.selectQuality === product.quality
         ) && (
-          this.state.selectCategory === 'ALL' || this.state.selectCategory === product.category
+          this.state.selectCategory === 'ALL' || product.categorys.includes(this.state.selectCategory)
         ) && (
           this.state.selectAuthor === 0 || product.author.includes(this.state.selectAuthor)
         )
