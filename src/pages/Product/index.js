@@ -7,7 +7,7 @@ import SelectCategoryFilter from '../../components/SelectCategoryFilter'
 import SelectQualityFilter from '../../components/SelectQualityFilter'
 
 // styles
-import { StyledFilter, StyledProducts } from './styles'
+import { StyledFilter, StyledProduct, StyledProducts } from './styles'
 
 // assets
 import { productAsset } from '../../static/assets/productAsset'
@@ -80,7 +80,7 @@ class Product extends Component {
     })
 
     return (
-      <div className="Product">
+      <StyledProduct className="Product">
         <h1>Product</h1>
 
         <StyledFilter>
@@ -109,7 +109,7 @@ class Product extends Component {
             />
           ))}
         </StyledProducts>
-      </div>
+      </StyledProduct>
     )
   }
 }

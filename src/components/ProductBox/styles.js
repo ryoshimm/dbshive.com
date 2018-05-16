@@ -17,7 +17,8 @@ export const StyledProductBox = styled.li`
   padding: 1rem 1rem 1rem 1rem;
   border-radius: 1rem;
   background: #ccc;
-  box-shadow: 0.6rem 0.6rem 0.6rem #666;
+  color: #333;
+  box-shadow: 0.6rem 0.6rem 0.6rem #333;
   word-wrap: break-word;
 `
 
