@@ -12,9 +12,10 @@ export const StyledMessage = styled.p`
 
 export const StyledProductBox = styled.li`
   position: relative;
-  width: 21.5rem;
-  margin: 1rem;
-  padding: 1rem 1rem 1rem 1rem;
+  width: 20rem;
+  min-height: 30rem;
+  margin: 1rem 0.8rem;
+  padding: 0 1rem 1rem 1rem;
   border-radius: 1rem;
   background: #ccc;
   color: #333;

@@ -20,4 +20,6 @@ export const StyledProducts = styled.ul`
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
+  justify-content: center;
+  padding: 0;
 `

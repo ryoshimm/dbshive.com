@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 // component
+import ImageBox from '../ImageBox'
 import ProductFooter from '../ProductFooter'
 
 // styles
@@ -45,22 +46,10 @@ class ProductBox extends Component {
         <Wrapper>
           <h3>{product.title}</h3>
 
-          {(() => {
-            if (this.state.imageFile) {
-              return (
-                <img
-                  alt={product.id}
-                  src={this.state.imageFile}
-                  width='200'
-                  height='100'
-                />
-              )
-            } else {
-              return (
-                <div>[image not found]</div>
-              )
-            }
-          })()}
+          <ImageBox
+            imageFile={this.state.imageFile}
+            product={product}
+          />
 
           <StyledDescription>
             {replaceDesctiption}
