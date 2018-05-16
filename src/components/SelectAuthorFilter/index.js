@@ -23,10 +23,10 @@ const SelectAuthorFilter = (props) => {
 
       {authorAsset.map(c => (
         <FilterButton
-          key={c.authorId}
-          data={c.authorId}
+          key={c.id}
+          data={c.id}
           label={c.name}
-          isToggle={select === c.authorId}
+          isToggle={select === c.id}
           onToggle={onToggle}
         />
       ))}
