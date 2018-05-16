@@ -8,7 +8,7 @@ import SelectQualityFilter from '../../components/SelectQualityFilter'
 
 // assets
 import { productAsset } from '../../static/assets/productAsset'
-// import { userAsset } from '../../static/assets/userAsset'
+// import { authorAsset } from '../../static/assets/authorAsset'
 
 
 class Product extends Component {

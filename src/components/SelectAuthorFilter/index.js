@@ -4,7 +4,7 @@ import React from 'react'
 import FilterButton from '../FilterButton'
 
 // assets
-import { userAsset } from '../../static/assets/userAsset'
+import { authorAsset } from '../../static/assets/authorAsset'
 
 
 const SelectAuthorFilter = (props) => {
@@ -21,12 +21,12 @@ const SelectAuthorFilter = (props) => {
         onToggle={onToggle}
       />
 
-      {userAsset.map(c => (
+      {authorAsset.map(c => (
         <FilterButton
-          key={c.userId}
-          data={c.userId}
+          key={c.authorId}
+          data={c.authorId}
           label={c.name}
-          isToggle={select === c.userId}
+          isToggle={select === c.authorId}
           onToggle={onToggle}
         />
       ))}
