@@ -1,31 +1,15 @@
 import React, { Component } from 'react'
 
+// component
+import ProductFooter from '../ProductFooter'
+
 // styles
-import { StyledProductBox } from './styles'
-
-
-const AuthorList = (props) => {
-  const { product, authorThumbnails } = props
-
-  const renderAuthorList = product.author.map(authorId => {
-    return (
-      <img
-        key={authorId}
-        alt={authorId}
-        src={authorThumbnails[authorId]}
-        width='32'
-        height='32'
-      />
-    )
-  })
-
-  return (
-    <div>
-      <div>Author: </div>
-      {renderAuthorList}
-    </div>
-  )
-}
+import {
+  StyledDescription,
+  StyledMessage,
+  StyledProductBox,
+  Wrapper,
+} from './styles'
 
 
 class ProductBox extends Component {
@@ -50,33 +34,43 @@ class ProductBox extends Component {
   render() {
     const { product, authorThumbnails } = this.props
 
+    const replaceDesctiption = product.description.split('\n').map(d => {
+      return (
+        <StyledMessage>{d}</StyledMessage>
+      )
+    })
+
     return (
       <StyledProductBox className="ProductBox">
-        <h3>{product.title}</h3>
+        <Wrapper>
+          <h3>{product.title}</h3>
 
-        {(() => {
-          if (this.state.imageFile) {
-            return (
-              <img
-                alt={product.id}
-                src={this.state.imageFile}
-                width='200'
-                height='100'
-              />
-            )
-          } else {
-            return (
-              <div>[image not found]</div>
-            )
-          }
-        })()}
+          {(() => {
+            if (this.state.imageFile) {
+              return (
+                <img
+                  alt={product.id}
+                  src={this.state.imageFile}
+                  width='200'
+                  height='100'
+                />
+              )
+            } else {
+              return (
+                <div>[image not found]</div>
+              )
+            }
+          })()}
 
-        {product.description}
+          <StyledDescription>
+            {replaceDesctiption}
+          </StyledDescription>
 
-        <AuthorList
-          authorThumbnails={authorThumbnails}
-          product={product}
-        />
+          <ProductFooter
+            authorThumbnails={authorThumbnails}
+            product={product}
+          />
+        </Wrapper>
       </StyledProductBox>
     )
   }
