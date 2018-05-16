@@ -6,6 +6,9 @@ import SelectAuthorFilter from '../../components/SelectAuthorFilter'
 import SelectCategoryFilter from '../../components/SelectCategoryFilter'
 import SelectQualityFilter from '../../components/SelectQualityFilter'
 
+// styles
+import { StyledFilter, StyledProducts } from './styles'
+
 // assets
 import { productAsset } from '../../static/assets/productAsset'
 import { authorAsset } from '../../static/assets/authorAsset'
@@ -80,22 +83,24 @@ class Product extends Component {
       <div className="Product">
         <h1>Product</h1>
 
-        <SelectQualityFilter
-          select={this.state.selectQuality}
-          onToggle={this.handleChangeSelectQuality}
-        />
+        <StyledFilter>
+          <SelectQualityFilter
+            select={this.state.selectQuality}
+            onToggle={this.handleChangeSelectQuality}
+          />
 
-        <SelectCategoryFilter
-          select={this.state.selectCategory}
-          onToggle={this.handleChangeSelectCategory}
-        />
+          <SelectCategoryFilter
+            select={this.state.selectCategory}
+            onToggle={this.handleChangeSelectCategory}
+          />
 
-        <SelectAuthorFilter
-          select={this.state.selectAuthor}
-          onToggle={this.handleChangeSelectAuthor}
-        />
+          <SelectAuthorFilter
+            select={this.state.selectAuthor}
+            onToggle={this.handleChangeSelectAuthor}
+          />
+        </StyledFilter>
 
-        <div>
+        <StyledProducts>
           {renderProducts.map(rp => (
             <ProductBox
               key={rp.id}
@@ -103,7 +108,7 @@ class Product extends Component {
               authorThumbnails={this.state.authorThumbnails}
             />
           ))}
-        </div>
+        </StyledProducts>
       </div>
     )
   }

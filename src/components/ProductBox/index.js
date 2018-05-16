@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 
+// styles
+import { StyledProductBox } from './styles'
+
 
 const AuthorList = (props) => {
   const { product, authorThumbnails } = props
@@ -7,6 +10,7 @@ const AuthorList = (props) => {
   const renderAuthorList = product.author.map(authorId => {
     return (
       <img
+        key={authorId}
         alt={authorId}
         src={authorThumbnails[authorId]}
         width='32'
@@ -47,7 +51,7 @@ class ProductBox extends Component {
     const { product, authorThumbnails } = this.props
 
     return (
-      <div className="ProductBox">
+      <StyledProductBox className="ProductBox">
         <h3>{product.title}</h3>
 
         {(() => {
@@ -73,7 +77,7 @@ class ProductBox extends Component {
           authorThumbnails={authorThumbnails}
           product={product}
         />
-      </div>
+      </StyledProductBox>
     )
   }
 }
