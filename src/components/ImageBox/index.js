@@ -3,12 +3,14 @@ import styled from 'styled-components'
 
 const ImageWrapper = styled.div`
   width: 100%;
-  height: 219px;
+  height: 13rem;
 `
 
 const Image = styled.img`
-  max-width: 100%;
+  width: 100%;
+  height: 100%
   border-radius: 0.5rem;
+  object-fit: cover;
 `
 
 
