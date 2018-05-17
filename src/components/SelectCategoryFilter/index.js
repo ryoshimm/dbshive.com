@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 
 // components
 import FilterButton from '../FilterButton'
@@ -6,8 +7,15 @@ import FilterButton from '../FilterButton'
 // assets
 import { categoryAsset } from '../../static/assets/categoryAsset'
 
-// styles
-import { Wrapper } from './styles'
+const Wrapper = styled.div`
+  margin: 0 1rem;
+`
+
+const StyledTitle = styled.p`
+  margin: 0.2rem 0;
+  font-family: monospace;
+  font-size: 1.2rem;
+`
 
 
 const SelectCategoryFilter = (props) => {
@@ -16,7 +24,7 @@ const SelectCategoryFilter = (props) => {
   return (
     <Wrapper>
       <div className="SelectCategoryFilter">
-        <h3>SelectCategory</h3>
+        <StyledTitle>Category</StyledTitle>
 
         <FilterButton
           data='ALL'

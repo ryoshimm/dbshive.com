@@ -1,11 +1,18 @@
 import React from 'react'
+import styled from 'styled-components'
 
 // components
 import FilterButton from '../FilterButton'
 
-// styles
-import { Wrapper } from './styles'
+const Wrapper = styled.div`
+  margin: 0 1rem;
+`
 
+const StyledTitle = styled.p`
+  margin: 0.2rem 0;
+  font-family: monospace;
+  font-size: 1.2rem;
+`
 
 const SelectQualityFilter = (props) => {
   const { select, onToggle } = props
@@ -13,7 +20,7 @@ const SelectQualityFilter = (props) => {
   return (
     <Wrapper>
       <div className="SelectQualityFilter">
-        <h3>SelectQuality</h3>
+        <StyledTitle>Quality</StyledTitle>
 
         <FilterButton
           data={0}

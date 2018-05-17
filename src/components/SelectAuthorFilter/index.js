@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 
 // components
 import FilterButton from '../FilterButton'
@@ -6,8 +7,16 @@ import FilterButton from '../FilterButton'
 // assets
 import { authorAsset } from '../../static/assets/authorAsset'
 
-// styles
-import { Wrapper } from './styles'
+const Wrapper = styled.div`
+  margin: 0 1rem;
+`
+
+const StyledTitle = styled.p`
+  margin: 0.2rem 0;
+  font-family: monospace;
+  font-size: 1.2rem;
+`
+
 
 const SelectAuthorFilter = (props) => {
   const { select, onToggle } = props
@@ -15,7 +24,7 @@ const SelectAuthorFilter = (props) => {
   return (
     <Wrapper>
       <div className="SelectAuthorFilter">
-        <h3>SelectAuthor</h3>
+        <StyledTitle>Author</StyledTitle>
 
         <FilterButton
           label='ALL'
@@ -26,6 +35,7 @@ const SelectAuthorFilter = (props) => {
 
         {authorAsset.map(c => (
           <FilterButton
+            attr='author'
             key={c.id}
             data={c.id}
             label={c.name}
