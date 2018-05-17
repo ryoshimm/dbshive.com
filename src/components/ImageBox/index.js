@@ -13,27 +13,15 @@ const Image = styled.img`
 
 
 const ImageBox = (props) => {
-  const { imageFile, product } = props
+  const { product } = props
 
   return (
-    <div>
-      {(() => {
-        if (imageFile) {
-          return (
-            <ImageWrapper>
-              <Image
-                alt={product.id}
-                src={imageFile}
-              />
-            </ImageWrapper>
-          )
-        } else {
-          return (
-            <div>[image not found]</div>
-          )
-        }
-      })()}
-    </div>
+    <ImageWrapper>
+      <Image
+        alt={product.id}
+        src={'/images/product/sc_product_' + product.id + '.jpg'}
+      />
+    </ImageWrapper>
   )
 }
 

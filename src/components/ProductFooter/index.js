@@ -12,12 +12,11 @@ const StyledProductFooter = styled.div`
 
 
 const ProductFooter = (props) => {
-  const { product, authorThumbnails } = props
+  const { product } = props
 
   return (
     <StyledProductFooter>
       <AuthorList
-        authorThumbnails={authorThumbnails}
         product={product}
       />
     </StyledProductFooter>

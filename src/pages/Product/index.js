@@ -11,12 +11,10 @@ import { StyledFilter, StyledProduct, StyledProducts } from './styles'
 
 // assets
 import { productAsset } from '../../static/assets/productAsset'
-import { authorAsset } from '../../static/assets/authorAsset'
 
 
 class Product extends Component {
   state = {
-    authorThumbnails: {},
     products: [],
     selectAuthor: 0,
     selectCategory: 'ALL',
@@ -30,21 +28,6 @@ class Product extends Component {
 
     this.setState({
       products: products,
-    })
-
-    authorAsset.forEach(author => {
-      import('../../static/images/authors/' + author.thumbnail)
-        .then(file => {
-          this.setState({
-            authorThumbnails: {
-              ...this.state.authorThumbnails,
-              [author.id]: file
-            }
-          })
-        })
-        .catch(() => {
-          console.log('[Error] imageFile Not Found: author:' + author.name)
-        })
     })
   }
 
@@ -105,7 +88,6 @@ class Product extends Component {
             <ProductBox
               key={rp.id}
               product={rp}
-              authorThumbnails={this.state.authorThumbnails}
             />
           ))}
         </StyledProducts>

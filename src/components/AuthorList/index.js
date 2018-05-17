@@ -7,14 +7,14 @@ const Image = styled.img`
 
 
 const AuthorList = (props) => {
-  const { product, authorThumbnails } = props
+  const { product } = props
 
   const renderAuthorList = product.author.map(authorId => {
     return (
       <Image
         key={authorId}
         alt={authorId}
-        src={authorThumbnails[authorId]}
+        src={'/images/author/sc_author_' + authorId + '.jpg'}
         width='32'
         height='32'
       />

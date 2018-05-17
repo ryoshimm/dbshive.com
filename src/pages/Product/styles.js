@@ -14,6 +14,7 @@ export const StyledProduct = styled.div`
   height: 100%;
   background-color: #555;
   color: #e1e8ed;
+  overflow-y: scroll;
 `
 
 export const StyledProducts = styled.ul`

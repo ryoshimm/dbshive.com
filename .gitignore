@@ -1,6 +1,7 @@
 # mySettings
 yarn.lock
 /src/static
+/public/images
 
 # dependencies
 /node_modules

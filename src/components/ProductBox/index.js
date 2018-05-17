@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 // component
 import ImageBox from '../ImageBox'
@@ -13,56 +13,38 @@ import {
 } from './styles'
 
 
-class ProductBox extends Component {
-  state = {
-    imageFile: null,
-  }
+const ProductBox = (props) => {
+  const { product, authorThumbnails } = props
 
-  componentWillMount() {
-    const { product } = this.props
-
-    import('../../static/images/products/sc_product_' + product.id + '.jpg')
-      .then(file => {
-        this.setState({
-          imageFile: file,
-        })
-      })
-      .catch(() => {
-        console.log('[Error] imageFile Not Found: product:' + product.id)
-      })
-  }
-
-  render() {
-    const { product, authorThumbnails } = this.props
-
-    const replaceDesctiption = product.description.split('\n').map(d => {
-      return (
-        <StyledMessage>{d}</StyledMessage>
-      )
-    })
-
+  // \nで改行
+  const replaceDesctiption = product.description.split('\n').map((d, idx) => {
     return (
-      <StyledProductBox className="ProductBox">
-        <Wrapper>
-          <h3>{product.title}</h3>
-
-          <ImageBox
-            imageFile={this.state.imageFile}
-            product={product}
-          />
-
-          <StyledDescription>
-            {replaceDesctiption}
-          </StyledDescription>
-
-          <ProductFooter
-            authorThumbnails={authorThumbnails}
-            product={product}
-          />
-        </Wrapper>
-      </StyledProductBox>
+      <StyledMessage key={idx}>
+        {d}
+      </StyledMessage>
     )
-  }
+  })
+
+  return (
+    <StyledProductBox className="ProductBox">
+      <Wrapper>
+        <h3>{product.title}</h3>
+
+        <ImageBox
+          product={product}
+        />
+
+        <StyledDescription>
+          {replaceDesctiption}
+        </StyledDescription>
+
+        <ProductFooter
+          authorThumbnails={authorThumbnails}
+          product={product}
+        />
+      </Wrapper>
+    </StyledProductBox>
+  )
 }
 
 export default ProductBox
