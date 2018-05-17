@@ -2,7 +2,8 @@ import React from 'react'
 
 // component
 import ImageBox from '../ImageBox'
-import ProductFooter from '../ProductFooter'
+import ProductAuthor from '../ProductAuthor'
+import ProductExternalLink from '../ProductExternalLink'
 
 // styles
 import {
@@ -14,7 +15,7 @@ import {
 
 
 const ProductBox = (props) => {
-  const { product, authorThumbnails } = props
+  const { product } = props
 
   // \nで改行
   const replaceDesctiption = product.description.split('\n').map((d, idx) => {
@@ -38,8 +39,11 @@ const ProductBox = (props) => {
           {replaceDesctiption}
         </StyledDescription>
 
-        <ProductFooter
-          authorThumbnails={authorThumbnails}
+        <ProductAuthor
+          product={product}
+        />
+
+        <ProductExternalLink
           product={product}
         />
       </Wrapper>

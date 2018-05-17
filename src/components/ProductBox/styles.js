@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 
 export const StyledDescription = styled.div`
-  margin: 2rem 0 4rem 0;
+  margin: 1rem 0 4rem 0;
 `
 
 export const StyledMessage = styled.p`
@@ -13,7 +13,7 @@ export const StyledMessage = styled.p`
 export const StyledProductBox = styled.li`
   position: relative;
   width: 20rem;
-  min-height: 30rem;
+  min-height: 28rem;
   margin: 1rem 0.8rem;
   padding: 0 1rem 1rem 1rem;
   border-radius: 1rem;
