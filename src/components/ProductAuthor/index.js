@@ -13,6 +13,7 @@ const StyledProductAuthor = styled.div`
 
 const Image = styled.img`
   margin: 0 0.4rem 0 0;
+  border-radius: 1rem;
 `
 
 

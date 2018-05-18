@@ -87,7 +87,8 @@ const ProductBox = (props) => {
         />
 
         <ProductExternalLink
-          product={product}
+          url={product.url}
+          githubUrl={product.githubUrl}
         />
       </Wrapper>
     </StyledProductBox>
