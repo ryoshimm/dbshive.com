@@ -20,17 +20,17 @@ const Image = styled.img`
 
 
 const ExternalLink = (props) => {
-  const { product } = props
+  const { url, githubUrl } = props
 
   return (
     <StyledProductExternalLink>
       {(() => {
-        if (product.url) {
+        if (url) {
           return (
-              <a href={product.url} target="_blank">
+              <a href={url} target="_blank">
                 <Tooltip id="tooltip-top" title='open website' placement="top">
                   <Image
-                    key={product.url}
+                    key={url}
                     src="/images/icon_link.png"
                     width='42'
                     height='42'
@@ -44,12 +44,12 @@ const ExternalLink = (props) => {
       })()}
 
       {(() => {
-        if (product.githubUrl) {
+        if (githubUrl) {
           return (
-              <a href={product.githubUrl} target="_blank">
+              <a href={githubUrl} target="_blank">
                 <Tooltip id="tooltip-top" title='See the source on Github' placement="top">
                   <Image
-                    key={product.githubUrl}
+                    key={githubUrl}
                     src="/images/icon_github.png"
                     width='42'
                     height='42'
