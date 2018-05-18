@@ -19,10 +19,21 @@ const ImageBox = (props) => {
 
   return (
     <ImageWrapper>
-      <Image
-        alt={product.id}
-        src={'/images/product/sc_product_' + product.id + '.jpg'}
-      />
+      {(() => {
+        if (product.imgUrl) {
+          return (
+            <Image
+              src={'/images/product/sc_' + product.imgUrl}
+            />
+          )
+        } else {
+          return (
+            <Image
+              src="/images/no_image.jpg"
+            />
+          )
+        }
+      })()}
     </ImageWrapper>
   )
 }

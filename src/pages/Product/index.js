@@ -84,10 +84,10 @@ class Product extends Component {
         </StyledFilter>
 
         <StyledProducts>
-          {renderProducts.map(rp => (
+          {renderProducts.map((product, idx) => (
             <ProductBox
-              key={rp.id}
-              product={rp}
+              key={idx}
+              product={product}
             />
           ))}
         </StyledProducts>
