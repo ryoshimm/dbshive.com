@@ -27,7 +27,7 @@ const ExternalLink = (props) => {
       {(() => {
         if (product.url) {
           return (
-              <a href={product.url}>
+              <a href={product.url} target="_blank">
                 <Tooltip id="tooltip-top" title='open website' placement="top">
                   <Image
                     key={product.url}
@@ -46,7 +46,7 @@ const ExternalLink = (props) => {
       {(() => {
         if (product.githubUrl) {
           return (
-              <a href={product.githubUrl}>
+              <a href={product.githubUrl} target="_blank">
                 <Tooltip id="tooltip-top" title='See the source on Github' placement="top">
                   <Image
                     key={product.githubUrl}
