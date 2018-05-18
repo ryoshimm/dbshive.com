@@ -8,14 +8,12 @@ export const StyledFilter = styled.div`
 `
 
 export const StyledProduct = styled.div`
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: #334;
   color: #e1e8ed;
-  overflow-y: scroll;
 `
 
 export const StyledProducts = styled.ul`
@@ -27,6 +25,7 @@ export const StyledProducts = styled.ul`
 `
 
 export const StyledTitle = styled.h1`
-  margin: 3rem 0 2rem 2rem;
+  margin: 0 2rem 2rem 2rem;
+  padding: 2rem 0 0 0;
   font-size: 2.5rem;
 `

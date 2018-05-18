@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom'
 // import registerServiceWorker from './registerServiceWorker'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
+// injectGlobal
+import './injectGlobal'
+
 // pages
 import Top from './pages/Top'
 import About from './pages/About'
