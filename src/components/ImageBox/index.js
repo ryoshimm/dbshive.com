@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import LazyLoad from 'react-lazyload'
 
 const ImageWrapper = styled.div`
   width: 100%;
@@ -19,21 +20,23 @@ const ImageBox = (props) => {
 
   return (
     <ImageWrapper>
-      {(() => {
-        if (product.imgUrl) {
-          return (
-            <Image
-              src={'/images/product/sc_' + product.imgUrl}
-            />
-          )
-        } else {
-          return (
-            <Image
-              src="/images/no_image.jpg"
-            />
-          )
-        }
-      })()}
+      <LazyLoad height='13rem' offset={500}>
+        {(() => {
+          if (product.imgUrl) {
+            return (
+              <Image
+                src={'/images/product/sc_' + product.imgUrl}
+              />
+            )
+          } else {
+            return (
+              <Image
+                src="/images/no_image.jpg"
+              />
+            )
+          }
+        })()}
+      </LazyLoad>
     </ImageWrapper>
   )
 }
