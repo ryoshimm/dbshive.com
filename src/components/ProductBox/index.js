@@ -4,13 +4,18 @@ import React from 'react'
 import ImageBox from '../ImageBox'
 import ProductAuthor from '../ProductAuthor'
 import ProductExternalLink from '../ProductExternalLink'
+import ProductTagList from '../ProductTagList'
 
 // styles
 import {
+  ContentsWrapper,
+  StyledAttention,
+  StyledDate,
   StyledDescription,
   StyledMessage,
   StyledProductBox,
   Wrapper,
+  WrapperAttention,
 } from './styles'
 
 
@@ -35,9 +40,47 @@ const ProductBox = (props) => {
           product={product}
         />
 
-        <StyledDescription>
-          {replaceDesctiption}
-        </StyledDescription>
+        <ContentsWrapper>
+          <StyledDescription>
+            {replaceDesctiption}
+          </StyledDescription>
+
+          {(() => {
+            if (product.date) {
+              return (
+                <StyledDate>
+                  Date: {product.date}
+                </StyledDate>
+              )
+            } else {
+              return null
+            }
+          })()}
+
+          {(() => {
+            if (product.attention) {
+              const replaceAttention = product.attention.split('\n').map((line, idx) => {
+                return (
+                  <StyledAttention key={idx}>
+                    {line}
+                  </StyledAttention>
+                )
+              })
+
+              return (
+                <WrapperAttention>
+                  {replaceAttention}
+                </WrapperAttention>
+              )
+            } else {
+              return null
+            }
+          })()}
+
+          <ProductTagList
+            product={product}
+          />
+        </ContentsWrapper>
 
         <ProductAuthor
           product={product}

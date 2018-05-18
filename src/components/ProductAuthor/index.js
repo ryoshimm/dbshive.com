@@ -7,7 +7,7 @@ const StyledProductAuthor = styled.div`
   position: absolute;
   left: 2rem
   bottom: 0;
-  margin: 0;
+  margin: 0 0 0.4rem 0;
   padding: 0;
 `
 

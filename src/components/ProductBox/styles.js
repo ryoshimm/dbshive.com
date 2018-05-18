@@ -1,13 +1,28 @@
 import styled from 'styled-components'
 
 
+export const ContentsWrapper = styled.div`
+  margin: 0 0 4rem 0;
+`
+
+export const StyledAttention = styled.div`
+  margin: 0 0 0 0.5rem;
+  font-size: 0.85rem;
+  color: #d44;
+`
+
+export const StyledDate = styled.div`
+  margin: 0 0 1rem 0.5rem;
+  font-size: 0.85rem;
+`
+
 export const StyledDescription = styled.div`
-  margin: 1rem 0 4rem 0;
+  margin: 1rem 0 1rem 0;
 `
 
 export const StyledMessage = styled.p`
-  font-size: 1rem;
   margin: 0 0.3rem;
+  font-size: 0.85rem;
 `
 
 export const StyledProductBox = styled.li`
@@ -25,4 +40,8 @@ export const StyledProductBox = styled.li`
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+`
+
+export const WrapperAttention = styled.div`
+  margin: 0 0 1rem 0;
 `
