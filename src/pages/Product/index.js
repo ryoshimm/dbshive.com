@@ -17,6 +17,7 @@ import {
 
 // assets
 import { productAsset } from '../../static/assets/productAsset'
+import { otherCategoryAsset } from '../../static/assets/categoryAsset'
 
 
 class Product extends Component {
@@ -57,11 +58,19 @@ class Product extends Component {
 
   render() {
     const renderProducts = this.state.products.filter(product => {
+      const isIncludeOther = product.categorys.some(category => {
+        return otherCategoryAsset.includes(category)
+      })
+
       return (
         (
           this.state.selectQuality === 0 || this.state.selectQuality === product.quality
         ) && (
-          this.state.selectCategory === 'ALL' || product.categorys.includes(this.state.selectCategory)
+          this.state.selectCategory === 'ALL'
+          || product.categorys.includes(this.state.selectCategory)
+          || (
+            this.state.selectCategory === 'other' && isIncludeOther
+          )
         ) && (
           this.state.selectAuthor === 0 || product.author.includes(this.state.selectAuthor)
         )
