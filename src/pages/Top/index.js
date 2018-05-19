@@ -1,14 +1,42 @@
 import React from 'react'
 
+// styles
+import {
+  Column,
+  Header,
+  HeaderTitle,
+  Title,
+  Wrapper,
+  WrapperTitle,
+} from './styles'
+
 
 const Top = () => {
   return (
-    <div className="Top">
-      <h1>Top</h1>
+    <div>
+      <Header>
+        <HeaderTitle>
+          DBSHIVE
+        </HeaderTitle>
+      </Header>
 
-      <a href='/product'>Product</a>
-      <br />
-      <a href='/about'>About</a>
+      <Wrapper>
+        <a href='/product'>
+          <Column>
+            <WrapperTitle>
+              <Title>Product</Title>
+            </WrapperTitle>
+          </Column>
+        </a>
+
+        <a href='/about'>
+          <Column>
+            <WrapperTitle>
+              <Title>About</Title>
+            </WrapperTitle>
+          </Column>
+        </a>
+      </Wrapper>
     </div>
   )
 }

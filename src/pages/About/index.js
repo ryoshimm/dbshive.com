@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 // components
 import AuthorBox from '../../components/AuthorBox'
+import Header from '../../components/Header'
 
 // assets
 import { authorAsset } from '../../static/assets/authorAsset'
@@ -16,7 +17,7 @@ export const StyledAbout = styled.div`
   color: #e1e8ed;
 `
 
-export const Wrapper = styled.ul`
+export const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
@@ -28,7 +29,9 @@ export const Wrapper = styled.ul`
 const About = () => {
   return (
     <StyledAbout className="About">
-      <h1>About</h1>
+      <Header
+        select='About'
+      />
       <Wrapper>
         {authorAsset.map(author => {
           return (

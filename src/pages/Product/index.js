@@ -1,13 +1,19 @@
 import React, { Component } from 'react'
 
 // components
+import Header from '../../components/Header'
 import ProductBox from '../../components/ProductBox'
 import SelectAuthorFilter from '../../components/SelectAuthorFilter'
 import SelectCategoryFilter from '../../components/SelectCategoryFilter'
 import SelectQualityFilter from '../../components/SelectQualityFilter'
 
 // styles
-import { StyledFilter, StyledProduct, StyledProducts } from './styles'
+import {
+  StyledFilter,
+  StyledProduct,
+  StyledProducts,
+  // WrapperHeader,
+} from './styles'
 
 // assets
 import { productAsset } from '../../static/assets/productAsset'
@@ -64,7 +70,9 @@ class Product extends Component {
 
     return (
       <StyledProduct className="Product">
-        <h1>Product</h1>
+        <Header
+          select='Product'
+        />
 
         <StyledFilter>
           <SelectQualityFilter
