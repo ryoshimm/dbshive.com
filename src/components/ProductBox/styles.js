@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 
 export const ContentsWrapper = styled.div`
-  margin: 0 0 4rem 0;
+  margin: 0 0 5.7rem 0;
 `
 
 export const StyledAttention = styled.div`
@@ -35,6 +35,10 @@ export const StyledProductBox = styled.li`
   background-color: #bbbbc2;
   color: #333;
   word-wrap: break-word;
+`
+
+export const StyledProductTitle = styled.h3`
+  margin: 1.7rem 0 0.5rem 0.2rem;
 `
 
 export const Wrapper = styled.div`

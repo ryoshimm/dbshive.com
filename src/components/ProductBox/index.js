@@ -2,6 +2,7 @@ import React from 'react'
 
 // component
 import ImageBox from '../ImageBox'
+import CategoryTag from '../CategoryTag'
 import ProductAuthor from '../ProductAuthor'
 import ProductExternalLink from '../ProductExternalLink'
 import ProductTagList from '../ProductTagList'
@@ -14,6 +15,7 @@ import {
   StyledDescription,
   StyledMessage,
   StyledProductBox,
+  StyledProductTitle,
   Wrapper,
   WrapperAttention,
 } from './styles'
@@ -34,7 +36,11 @@ const ProductBox = (props) => {
   return (
     <StyledProductBox className="ProductBox">
       <Wrapper>
-        <h3>{product.title}</h3>
+        <CategoryTag
+          categorys={product.categorys}
+        />
+
+        <StyledProductTitle>{product.title}</StyledProductTitle>
 
         <ImageBox
           product={product}
