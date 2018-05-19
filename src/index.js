@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-// import registerServiceWorker from './registerServiceWorker'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import registerServiceWorker from './registerServiceWorker'
 
 // injectGlobal
 import './injectGlobal'
@@ -26,4 +26,4 @@ ReactDOM.render(
   ),
   document.getElementById('root')
 )
-// registerServiceWorker()
+registerServiceWorker()
