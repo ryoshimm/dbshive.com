@@ -33,6 +33,7 @@ const About = () => {
         {authorAsset.map(author => {
           return (
             <AuthorBox
+              key={author.id}
               author={author}
             />
           )
