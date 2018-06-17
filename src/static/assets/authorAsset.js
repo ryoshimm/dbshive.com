@@ -48,7 +48,7 @@ export const authorAsset = [
       '飲み会',
       'VTuber視聴',
     ],
-    mail: '*****@gmail.com',
+    mail: 'atsuo@cps.im.dendai.ac.jp',
     url: 'https://atsuo1203.github.io/',
     githubUrl: 'https://github.com/atsuo1203',
   }
