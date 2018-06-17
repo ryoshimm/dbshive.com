@@ -17,7 +17,7 @@ import {
 
 
 const AuthorBox = (props) => {
-  const { author } = props
+  const { author, width } = props
 
   // \nで改行
   const replaceDesctiption = author.description.split('\n').map((d, idx) => {
@@ -29,7 +29,7 @@ const AuthorBox = (props) => {
   })
 
   return (
-    <StyledAuthorBox className="AuthorBox">
+    <StyledAuthorBox className="AuthorBox" width={width}>
       <WrapperContents>
         <Wrapper>
           <Container>

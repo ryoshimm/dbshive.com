@@ -15,9 +15,11 @@ export const StyledMessage = styled.p`
   font-size: 0.85rem;
 `
 
-export const StyledAuthorBox = styled.li`
+export const StyledAuthorBox = styled.li.attrs({
+  width: props => props.width || '28rem'
+})`
   position: relative;
-  width: 28rem;
+  width: ${props => props.width};
   min-height: 20rem;
   margin: 2rem 2rem;
   padding: 1rem 1rem 1rem 1rem;
