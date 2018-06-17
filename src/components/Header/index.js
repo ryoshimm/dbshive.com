@@ -88,6 +88,17 @@ const Header = (props) => {
               </WrapperTitle>
             </a>
           </StyledItem>
+
+          <StyledItem
+            bg={select === 'Profile' ? '#3aa' : '#334'}
+          >
+            <a href='/profile'>
+              <WrapperTitle>
+                <StyledTitle>Profile</StyledTitle>
+              </WrapperTitle>
+            </a>
+          </StyledItem>
+
       </WrapperItem>
     </Wrapper>
   )

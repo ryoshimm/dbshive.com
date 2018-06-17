@@ -7,24 +7,36 @@ import ProductExternalLink from '../../components/ProductExternalLink'
 import {
   Container,
   Image,
+  IconImage,
   StyledAuthorBox,
   StyledDescription,
-  StyledMessage,
+  StyledItem,
+  StyledItemTitle,
   StyledName,
   Wrapper,
   WrapperContents,
+  WrapperItems,
 } from './styles'
 
 
 const AuthorBox = (props) => {
   const { author, width } = props
 
-  // \nで改行
-  const replaceDesctiption = author.description.split('\n').map((d, idx) => {
+  const replaceMainDescription = author.mainDescription.map(d => {
     return (
-      <StyledMessage key={idx}>
-        {d}
-      </StyledMessage>
+      <li>{d}</li>
+    )
+  })
+
+  const replaceItemTechnology = author.itemTechnology.map(item => {
+    return (
+      <li>{item}</li>
+    )
+  })
+
+  const replaceItemHobby = author.itemHobby.map(item => {
+    return (
+      <li>{item}</li>
     )
   })
 
@@ -44,7 +56,34 @@ const AuthorBox = (props) => {
           </Container>
         </Wrapper>
         <StyledDescription>
-          {replaceDesctiption}
+          {replaceMainDescription}
+
+          <WrapperItems>
+            <StyledItem>
+              <StyledItemTitle>
+                <IconImage src='/images/icon_tech.png' />
+                Technology
+              </StyledItemTitle>
+              <ul>{replaceItemTechnology}</ul>
+            </StyledItem>
+
+            <StyledItem>
+              <StyledItemTitle>
+                <IconImage src='/images/icon_hobby.png' />
+                Hobby
+              </StyledItemTitle>
+              <ul>{replaceItemHobby}</ul>
+            </StyledItem>
+
+            <StyledItem>
+              <StyledItemTitle>
+                <IconImage src='/images/icon_mail.png' />
+                Mail
+              </StyledItemTitle>
+              <ul><li>{author.mail}</li></ul>
+            </StyledItem>
+          </WrapperItems>
+
         </StyledDescription>
       </WrapperContents>
       <ProductExternalLink
