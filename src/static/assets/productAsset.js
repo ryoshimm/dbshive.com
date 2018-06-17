@@ -27,9 +27,7 @@ author:
 export const productAsset = [
   {
     title: 'dbshive.com',
-    description:
-      'ポートフォリオサイト第一弾\n'
-      + 'もっとアプデしていけ',
+    description: 'ポートフォリオサイト第一弾',
     categorys: ['web'],
     tags: ['react'],
     author: [1],
@@ -42,7 +40,7 @@ export const productAsset = [
     title: 'TearChat',
     description:
       'クトゥルフTRPG用の専用マルチチャット\n'
-      + '旧CoCRevolution\n'
+      + '(旧CoCRevolution)\n'
       + 'オンラインセッションTRPG中にチャット(discord)、ダイスツール、キャラクターシートと別々の'
       + 'サイトのものを見るのは大変'
       + 'なので、それらを一括にまとめたwebサービスを作成した\n'
@@ -55,6 +53,8 @@ export const productAsset = [
     imgUrl: 'tearchat.jpg',
     date: '2018/05',
     url: 'http://tearchat.dbshive.com',
+    attention:
+      '※ ログインには管理者の承認が必要',
   },
   {
     title: '万丈ジェネレーター',
@@ -93,8 +93,8 @@ export const productAsset = [
     title: '性格診断メーカー',
     description:
       '@atsuo1203のpython+django勉強で作成したwebアプリ\n'
-      + '回答者の質問にいくつか答えて、その結果から性格を診断するだけのサービス\n'
-      + '多分ツイートもできる',
+      + '回答者の質問にいくつか答えて、その結果から性格を診断するのサービス\n'
+      + 'ツイートもできる',
     categorys: ['web'],
     tags: ['python', 'django'],
     author: [1, 2],
@@ -130,9 +130,9 @@ export const productAsset = [
     title: '良性ページ分類.py',
     description:
       'htmlを形態素解析+機械学習でいい感じのページを予測するスクリプト\n'
-      + 'いい感じ＝特定の分野(分散していない)で、情報量が多いページと定義してpythonで作成した\n'
-      + 'ex) まとめサイトなどは除外され、サッカーショップなどのサイトが該当する\n'
-      + '機械学習インターンで色々機械学習についてのノウハウを学ぶことのできるいい機会だった',
+      + '「いい感じ」とは，情報が分散していない，特定の分野のページと設定して，pythonでスクリプト作成\n'
+      + 'ex) まとめサイトなどは除外され、サッカーショップなどのある特定分野のサイトが該当する\n'
+      + '機械学習インターンで，色々機械学習についてのノウハウを学ぶことのできるいい機会だった',
     categorys: ['machine-learning'],
     tags: ['python'],
     author: [1],
@@ -143,7 +143,8 @@ export const productAsset = [
     title: 'WordResearcher',
     description:
       'テスト対策用検索Webサービス\n'
-      + '一言でいうとwikipediaのテスト対策特化版\n'
+      + '大学の授業内容(紙媒体)の内容を事前にこのサービスに入力して，検索によって素早くしりたい'
+      + '情報を知ることが目的のサービス'
       + 'しかし、DBにデータを入れなければいけない面倒臭さから頓挫',
     categorys: ['web'],
     tags: ['django', 'python'],
@@ -182,7 +183,7 @@ export const productAsset = [
       + 'ふざけた名前は置いておいて、ブラウザの脆弱性を診断してくれるWebサービスと内容は割とまとも\n'
       + 'webサービスにアクセスして診断ボタンを押すだけの超初心者仕様\n'
       + '大学のセキュリティ研究室メンバー(3人)で作成した\n'
-      + '自分はフロントとバック担当\nExploit-DBを利用\n',
+      + '自分はフロントとバックを主に担当\nExploit-DBという脆弱性情報ライブラリを利用\n',
     categorys: ['web', 'security'],
     tags: ['python', 'django', 'exploit-db'],
     author: [1],
@@ -227,8 +228,7 @@ export const productAsset = [
     description:
       'electron + node.js + socket.ioで作るリアルタイムチャットアプリ\n'
       + 'TearChatの原点のwebアプリ\n'
-      + 'なぜかelectronでやろうということになった\n'
-      + 'nodeが理解できずに苦しんでいた時期',
+      + 'なぜかelectronでやろうということになった',
     categorys: ['web'],
     tags: ['electron', 'node.js', 'socket.io'],
     author: [1],
