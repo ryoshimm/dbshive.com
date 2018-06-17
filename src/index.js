@@ -9,8 +9,9 @@ import './injectGlobal'
 // pages
 import Top from './pages/Top'
 import About from './pages/About'
-import Product from './pages/Product'
 import NoMatch from './pages/NoMatch'
+import Product from './pages/Product'
+import Profile from './pages/Profile'
 
 
 ReactDOM.render(
@@ -20,6 +21,7 @@ ReactDOM.render(
         <Route exact path='/' component={Top} />
         <Route path='/about' component={About} />
         <Route path='/product' component={Product} />
+        <Route path='/profile' component={Profile} />
         <Route component={NoMatch} />
       </Switch>
     </BrowserRouter>

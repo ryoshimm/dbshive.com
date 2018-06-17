@@ -25,14 +25,16 @@ const ProductAuthor = (props) => {
     const authorName = authorAsset[authorId - 1].name
 
     return (
-      <Tooltip key={authorId} id="tooltip-top" title={authorName} placement="top">
-        <Image
-          alt={authorId}
-          src={'/images/author/sc_author_' + authorId + '.jpg'}
-          width='32'
-          height='32'
-        />
-      </Tooltip>
+      <a href='/about'>
+        <Tooltip key={authorId} id="tooltip-top" title={authorName} placement="top">
+            <Image
+              alt={authorId}
+              src={'/images/author/sc_author_' + authorId + '.jpg'}
+              width='32'
+              height='32'
+            />
+        </Tooltip>
+      </a>
     )
   })
 

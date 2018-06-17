@@ -1,29 +1,29 @@
 export const authorAsset = [
   {
     id: 1,
-    name: 'rias-z',
+    name: 'rias-z (Ryosuke Shimma)',
     thumbnail: 'sc_rias-z_thumbnail.png',
-    description:
-      '浅く広くがモットー\n'
-      + 'ベンチャー企業でバイトとしてフロントエンドとバックエンドを書いてます\n'
-      + '-\n'
-      + '- 割とできる\n'
-      + 'フロントエンド（react/redux）\n'
-      + 'バックエンド（flask(python)、express(node.js)）\n'
-      + '-\n'
-      + '- 人並みレベル\n'
-      + 'Linux\n'
-      + 'git\n'
-      + '機械学習\n'
-      + 'イラスト作成\n'
-      + '3Dゲーム作成（unity、C++）\n'
-      + 'Java\n'
-      + 'C\n'
-      + '-\n'
-      + '- 入門レベル\n'
-      + '3Dモデリング\n'
-      + 'gifアニメーション作成\n'
-      + '音楽作成\n',
+    mainDescription: [
+      '修士1年',
+      '大学ではセキュリティと機械学習を専攻',
+      'webサービス開発が趣味',
+      '@atsuo1203と共同でwebサービス開発することが多い',
+    ],
+    itemTechnology: [
+      'javascript (react/redux)',
+      'node.js (express)',
+      'python (flask, django)',
+      '機械学習/形態素解析',
+      '開発 (git, vim)',
+      'unity (2d/3dゲーム開発)',
+    ],
+    itemHobby: [
+      'webサービス開発',
+      '旅行',
+      'ダーツ',
+      'ランニング, 筋トレ',
+      'イラスト制作',
+    ],
     mail: 'chestermx88@gmail.com',
     githubUrl: 'https://github.com/rias-z',
   },
@@ -31,8 +31,23 @@ export const authorAsset = [
     id: 2,
     name: 'atsuo1203',
     thumbnail: 'sc_atsuo1203_thumbnail.jpg',
-    description:
-      '準備中...',
+    mainDescription: [
+      '修士1年',
+      'ホロレンズを使った研究をしている',
+    ],
+    itemTechnology: [
+      'javascript (react/redux)',
+      'python (flask)',
+      'ruby',
+      'swift (ios開発)',
+      '開発 (git, vim)',
+      'unity (2dゲーム開発)',
+    ],
+    itemHobby: [
+      'webサービス開発',
+      '飲み会',
+      'VTuber視聴',
+    ],
     mail: '*****@gmail.com',
     url: 'https://atsuo1203.github.io/',
     githubUrl: 'https://github.com/atsuo1203',
