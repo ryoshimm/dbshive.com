@@ -38,7 +38,7 @@ const SelectAuthorFilter = (props) => {
             attr='author'
             key={c.id}
             data={c.id}
-            label={c.name}
+            label={c.selectName}
             isToggle={select === c.id}
             onToggle={onToggle}
           />

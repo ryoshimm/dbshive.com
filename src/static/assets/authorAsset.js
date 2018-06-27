@@ -2,6 +2,7 @@ export const authorAsset = [
   {
     id: 1,
     name: 'rias-z (Ryosuke Shimma)',
+    selectName: 'rias-z',
     thumbnail: 'sc_rias-z_thumbnail.png',
     mainDescription: [
       '修士1年',
@@ -30,6 +31,7 @@ export const authorAsset = [
   {
     id: 2,
     name: 'atsuo1203',
+    selectName: 'atsuo1203',
     thumbnail: 'sc_atsuo1203_thumbnail.jpg',
     mainDescription: [
       '修士1年',
