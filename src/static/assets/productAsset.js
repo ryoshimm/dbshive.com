@@ -26,6 +26,25 @@ author:
 
 export const productAsset = [
   {
+    title: '学生限定掲示板',
+    description:
+      '学生限定の掲示板\n'
+      + '学生のメールアドレスを使用することによって本サービスに登録することができる\n'
+      + '学生のみの2chあったら面白そう(by @atsuo1203)という発想の元，'
+      + '開発期間は1ヶ月と設定して作業を分担して作成した\n'
+      + '@atsuo1203が企画，フロント側を担当\n'
+      + '自分はサーバ側を担当\n'
+      + 'RestAPIとしてのテストを初めてしっかり作成した',
+    categorys: ['web', 'sns'],
+    tags: ['react', 'redux', 'redux-saga', 'flask', 'mysql'],
+    author: [1, 2],
+    quality: 2,
+    imgUrl: 'student_2ch.jpg',
+    date: '2018/06',
+    attention:
+      '※ 現在公開準備中',
+  },
+  {
     title: 'dbshive.com',
     description: 'ポートフォリオサイト第一弾',
     categorys: ['web'],
