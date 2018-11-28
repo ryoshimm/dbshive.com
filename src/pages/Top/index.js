@@ -11,7 +11,11 @@ import {
 } from './styles'
 
 
-const Top = () => {
+const Top = (props) => {
+  const handleTransitionScreen = (path) => {
+    props.history.push(path)
+  }
+
   return (
     <div>
       <Header>
@@ -21,21 +25,17 @@ const Top = () => {
       </Header>
 
       <Wrapper>
-        <a href='/product'>
-          <Column>
-            <WrapperTitle>
-              <Title>Product</Title>
-            </WrapperTitle>
-          </Column>
-        </a>
+        <Column onClick={() => handleTransitionScreen('/product')}>
+          <WrapperTitle>
+            <Title>Product</Title>
+          </WrapperTitle>
+        </Column>
 
-        <a href='/about'>
-          <Column>
-            <WrapperTitle>
-              <Title>About</Title>
-            </WrapperTitle>
-          </Column>
-        </a>
+        <Column onClick={() => handleTransitionScreen('/about')}>
+          <WrapperTitle>
+            <Title>About</Title>
+          </WrapperTitle>
+        </Column>
       </Wrapper>
     </div>
   )

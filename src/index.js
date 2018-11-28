@@ -11,7 +11,7 @@ import Top from './pages/Top'
 import About from './pages/About'
 import NoMatch from './pages/NoMatch'
 import Product from './pages/Product'
-import Profile from './pages/Profile'
+import Collaborator from './pages/Collaborator'
 
 
 ReactDOM.render(
@@ -21,11 +21,12 @@ ReactDOM.render(
         <Route exact path='/' component={Top} />
         <Route path='/about' component={About} />
         <Route path='/product' component={Product} />
-        <Route path='/profile' component={Profile} />
+        <Route path='/collaborator' component={Collaborator} />
         <Route component={NoMatch} />
       </Switch>
     </BrowserRouter>
   ),
   document.getElementById('root')
 )
+
 registerServiceWorker()

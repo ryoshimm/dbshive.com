@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 // components
 import Header from '../../components/Header'
 import ProductBox from '../../components/ProductBox'
-import SelectAuthorFilter from '../../components/SelectAuthorFilter'
 import SelectCategoryFilter from '../../components/SelectCategoryFilter'
 import SelectQualityFilter from '../../components/SelectQualityFilter'
 
@@ -71,17 +70,13 @@ class Product extends Component {
           || (
             this.state.selectCategory === 'other' && isIncludeOther
           )
-        ) && (
-          this.state.selectAuthor === 0 || product.author.includes(this.state.selectAuthor)
         )
       )
     })
 
     return (
       <StyledProduct className="Product">
-        <Header
-          select='Product'
-        />
+        <Header select='Product' />
 
         <StyledFilter>
           <SelectQualityFilter
@@ -93,17 +88,12 @@ class Product extends Component {
             select={this.state.selectCategory}
             onToggle={this.handleChangeSelectCategory}
           />
-
-          <SelectAuthorFilter
-            select={this.state.selectAuthor}
-            onToggle={this.handleChangeSelectAuthor}
-          />
         </StyledFilter>
 
         <StyledProducts>
-          {renderProducts.map((product, idx) => (
+          {renderProducts.map(product => (
             <ProductBox
-              key={idx}
+              key={product.title}
               product={product}
             />
           ))}

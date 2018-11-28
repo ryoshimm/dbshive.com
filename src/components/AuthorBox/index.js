@@ -22,21 +22,27 @@ import {
 const AuthorBox = (props) => {
   const { author, width } = props
 
-  const replaceMainDescription = author.mainDescription.map(d => {
+  const replaceMainDescription = author.mainDescription.map((d, idx) => {
     return (
-      <li>{d}</li>
+      <li key={idx}>{d}</li>
     )
   })
 
-  const replaceItemTechnology = author.itemTechnology.map(item => {
+  const replaceItemTechnology = author.itemTechnology.map((item, idx) => {
     return (
-      <li>{item}</li>
+      <li key={idx}>{item}</li>
     )
   })
 
-  const replaceItemHobby = author.itemHobby.map(item => {
+  const replaceItemHobby = author.itemHobby.map((item, idx) => {
     return (
-      <li>{item}</li>
+      <li key={idx}>{item}</li>
+    )
+  })
+
+  const replaceItemMail = author.itemMail.map((mail, idx) => {
+    return (
+      <li key={idx}>{mail}</li>
     )
   })
 
@@ -56,7 +62,7 @@ const AuthorBox = (props) => {
           </Container>
         </Wrapper>
         <StyledDescription>
-          {replaceMainDescription}
+          <ul>{replaceMainDescription}</ul>
 
           <WrapperItems>
             <StyledItem>
@@ -80,7 +86,7 @@ const AuthorBox = (props) => {
                 <IconImage src='/images/icon_mail.png' />
                 Mail
               </StyledItemTitle>
-              <ul><li>{author.mail}</li></ul>
+              <ul>{replaceItemMail}</ul>
             </StyledItem>
           </WrapperItems>
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { withRouter } from 'react-router-dom'
 
 
 const Wrapper = styled.div`
@@ -15,9 +16,10 @@ const WrapperItem = styled.div`
 `
 
 const StyledItem = styled.div.attrs({
-  bg: props => props.bg
+  bg: props => props.bg,
+  width: props => props.width || '7rem',
 })`
-  width: 7rem;
+  width: ${props => props.width};
   height: 3rem;
   background-color: ${props => props.bg};
   text-align: center;
@@ -56,52 +58,53 @@ const WrapperTitle = styled.div`
 const Header = (props) => {
   const { select } = props
 
+  const handleTrasitionScreen = (path) => {
+    props.history.push(path)
+  }
+
   return (
     <Wrapper>
       <StyledHeaderTitle>{select}</StyledHeaderTitle>
 
       <WrapperItem>
-          <StyledItem>
-            <a href='/'>
-              <WrapperTitle>
-                <StyledTitle>Top</StyledTitle>
-              </WrapperTitle>
-            </a>
+          <StyledItem
+            onClick={() => handleTrasitionScreen('/')}
+          >
+            <WrapperTitle>
+              <StyledTitle>Top</StyledTitle>
+            </WrapperTitle>
           </StyledItem>
 
           <StyledItem
             bg={select === 'Product' ? '#3aa' : '#334'}
+            onClick={() => handleTrasitionScreen('/product')}
           >
-            <a href='/product'>
-              <WrapperTitle>
-                <StyledTitle>Product</StyledTitle>
-              </WrapperTitle>
-            </a>
+            <WrapperTitle>
+              <StyledTitle>Product</StyledTitle>
+            </WrapperTitle>
           </StyledItem>
 
           <StyledItem
             bg={select === 'About' ? '#3aa' : '#334'}
+            onClick={() => handleTrasitionScreen('/about')}
           >
-            <a href='/about'>
-              <WrapperTitle>
-                <StyledTitle>About</StyledTitle>
-              </WrapperTitle>
-            </a>
+            <WrapperTitle>
+              <StyledTitle>About</StyledTitle>
+            </WrapperTitle>
           </StyledItem>
 
           <StyledItem
-            bg={select === 'Profile' ? '#3aa' : '#334'}
+            width='10rem'
+            bg={select === 'Collaborator' ? '#3aa' : '#334'}
+            onClick={() => handleTrasitionScreen('/collaborator')}
           >
-            <a href='/profile'>
-              <WrapperTitle>
-                <StyledTitle>Profile</StyledTitle>
-              </WrapperTitle>
-            </a>
+            <WrapperTitle>
+              <StyledTitle>Collaborator</StyledTitle>
+            </WrapperTitle>
           </StyledItem>
-
       </WrapperItem>
     </Wrapper>
   )
 }
 
-export default Header
+export default withRouter(Header)

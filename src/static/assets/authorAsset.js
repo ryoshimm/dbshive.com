@@ -1,14 +1,13 @@
 export const authorAsset = [
   {
     id: 1,
-    name: 'rias-z (Ryosuke Shimma)',
+    name: 'Ryosuke Shimma (@rubel4cb)',
     selectName: 'rias-z',
     thumbnail: 'sc_rias-z_thumbnail.png',
     mainDescription: [
-      '修士1年',
+      '修士1年 (2018年度)',
       '大学ではセキュリティと機械学習を専攻',
       'webサービス開発が趣味',
-      '@atsuo1203と共同でwebサービス開発することが多い',
     ],
     itemTechnology: [
       'javascript (react/redux)',
@@ -25,33 +24,10 @@ export const authorAsset = [
       'ランニング, 筋トレ',
       'イラスト制作',
     ],
-    mail: 'chestermx88@gmail.com',
+    itemMail: [
+      'rubel4cb@gmail.com (メイン)',
+      'chestermx88@gmail.com (前垢)',
+    ],
     githubUrl: 'https://github.com/rias-z',
   },
-  {
-    id: 2,
-    name: 'atsuo1203',
-    selectName: 'atsuo1203',
-    thumbnail: 'sc_atsuo1203_thumbnail.jpg',
-    mainDescription: [
-      '修士1年',
-      'ホロレンズを使った研究をしている',
-    ],
-    itemTechnology: [
-      'javascript (react/redux)',
-      'python (flask)',
-      'ruby',
-      'swift (ios開発)',
-      '開発 (git, vim)',
-      'unity (2dゲーム開発)',
-    ],
-    itemHobby: [
-      'webサービス開発',
-      '飲み会',
-      'VTuber視聴',
-    ],
-    mail: 'atsuo@cps.im.dendai.ac.jp',
-    url: 'https://atsuo1203.github.io/',
-    githubUrl: 'https://github.com/atsuo1203',
-  }
 ]

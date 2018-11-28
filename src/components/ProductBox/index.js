@@ -3,7 +3,7 @@ import React from 'react'
 // component
 import ImageBox from '../ImageBox'
 import CategoryTag from '../CategoryTag'
-import ProductAuthor from '../ProductAuthor'
+import ProductCollaborator from '../ProductCollaborator'
 import ProductExternalLink from '../ProductExternalLink'
 import ProductTagList from '../ProductTagList'
 
@@ -88,7 +88,7 @@ const ProductBox = (props) => {
           />
         </ContentsWrapper>
 
-        <ProductAuthor
+        <ProductCollaborator
           product={product}
         />
 
