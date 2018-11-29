@@ -1,7 +1,7 @@
 export const authorAsset = [
   {
     id: 1,
-    name: 'Ryosuke Shimma (@rubel4cb)',
+    name: 'Ryosuke Shimma (@rias-z)',
     selectName: 'rias-z',
     thumbnail: 'sc_rias-z_thumbnail.png',
     mainDescription: [
@@ -26,7 +26,7 @@ export const authorAsset = [
     ],
     itemMail: [
       'rubel4cb@gmail.com (メイン)',
-      'chestermx88@gmail.com (前垢)',
+      'chestermx88@gmail.com (開発用)',
     ],
     githubUrl: 'https://github.com/rias-z',
   },
