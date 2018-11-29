@@ -182,6 +182,19 @@ export const productAsset = [
     githubUrl: 'https://github.com/rias-z/illustpedia',
   },
   {
+    title: '研究室配属応募状況bot',
+    description:
+      '研究室の配属状況を通知するtwitterのbot\n'
+      + '自分はpythonを用いてデータの取得，グラフの描画/出力を担当した\n'
+      + 'サービスアイコンを自作',
+    categorys: ['sns'],
+    tags: ['python', 'matplotlib'],
+    quality: 1,
+    imgUrl: 'labot.jpg',
+    date: '2016/09',
+    url: 'https://twitter.com/TDU_bot_a?lang=ja',
+  },
+  {
     title: 'ぐるマッチ',
     description:
       '大学のグループ課題(5人)で作ったwebサービス\n'
